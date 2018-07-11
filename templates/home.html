@@ -1,0 +1,31 @@
+<!--https://docs.djangoproject.com/en/2.0/ref/templates/language/#template-inheritance-->
+
+{% extends 'base.html'%}
+
+{% load static %}
+<!--estilos css -->
+{% block custom_css%}
+<!--asi se llama archivos estaticos en django-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/home_styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <div id="home-content">
+
+                <h1>LearNow - Get Started</h1>
+                <h3>Aprender lo mejor de la Web</h3>
+
+                <hr>
+                <button type="button" class="btn btn-light btn-lg">Get Started</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
